@@ -1,0 +1,216 @@
+{
+  "toppings": {
+    "en": [
+      "tomatoes",
+      "mozzarella",
+      "basil",
+      "pepperoni",
+      "seafood",
+      "olives",
+      "gouda",
+      "blue_cheese",
+      "parmesan",
+      "ham",
+      "mushrooms",
+      "onion",
+      "bell_pepper",
+      "teriyaki_chicken",
+      "pineapple",
+      "capers",
+      "anchovies",
+      "oregano"
+    ],
+    "ru": [
+      "помидоры",
+      "моцарелла",
+      "базилик",
+      "пепперони",
+      "морепродукты",
+      "оливки",
+      "гауда",
+      "дор блю",
+      "пармезан",
+      "ветчина",
+      "шампиньоны",
+      "лук",
+      "болгарский перец",
+      "курица терияки",
+      "ананас",
+      "каперсы",
+      "анчоусы",
+      "орегано"
+    ]
+  },
+  "pizzas": [
+    {
+      "id": 1,
+      "name": {
+        "en": "margherita",
+        "ru": "маргарита"
+      },
+      "img": ["img/margherita.png", "img/margherita.webp"],
+      "price": {
+        "25cm": 400,
+        "30cm": 500,
+        "35cm": 600
+      },
+      "toppings": {
+        "en": "tomatoes, mozzarella, basil",
+        "ru": "помидоры, моцарелла, базилик"
+      }
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "pepperoni",
+        "ru": "пепперони"
+      },
+      "img": ["img/pepperoni.png", "img/pepperoni.webp"],
+      "price": {
+        "25cm": 450,
+        "30cm": 550,
+        "35cm": 650
+      },
+      "toppings": {
+        "en": "pepperoni, mozzarella",
+        "ru": "пепперони, моцарелла"
+      }
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "seafood",
+        "ru": "морская"
+      },
+      "img": ["img/seafood.png", "img/seafood.webp"],
+      "price": {
+        "25cm": 500,
+        "30cm": 600,
+        "35cm": 700
+      },
+      "toppings": {
+        "en": "seafood, mozzarella, olives",
+        "ru": "морепродукты, моцарелла, оливки"
+      }
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "fourcheese",
+        "ru": "четыре сыра"
+      },
+      "img": ["img/fourcheese.png", "img/fourcheese.webp"],
+      "price": {
+        "25cm": 480,
+        "30cm": 580,
+        "35cm": 680
+      },
+      "toppings": {
+        "en": "gouda, blue_cheese, parmesan, mozzarella",
+        "ru": "гауда, дор блю, пармезан, моцарелла"
+      }
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "capricciosa",
+        "ru": "капричиоза"
+      },
+      "img": ["img/capricciosa.png", "img/capricciosa.webp"],
+      "price": {
+        "25cm": 470,
+        "30cm": 570,
+        "35cm": 670
+      },
+      "toppings": {
+        "en": "ham, mushrooms, mozzarella, olives",
+        "ru": "ветчина, шампиньоны, моцарелла, оливки"
+      }
+    },
+    {
+      "id": 6,
+      "name": {
+        "en": "mushroom",
+        "ru": "с грибами"
+      },
+      "img": ["img/mushroom.png", "img/mushroom.webp"],
+      "price": {
+        "25cm": 460,
+        "30cm": 560,
+        "35cm": 660
+      },
+      "toppings": {
+        "en": "mushrooms, mozzarella, onion, bell_pepper",
+        "ru": "шампиньоны, моцарелла, лук, болгарский перец"
+      }
+    },
+    {
+      "id": 7,
+      "name": {
+        "en": "ham",
+        "ru": "с ветчиной"
+      },
+      "img": ["img/ham.png", "img/ham.webp"],
+      "price": {
+        "25cm": 470,
+        "30cm": 570,
+        "35cm": 670
+      },
+      "toppings": {
+        "en": "ham, mozzarella, olives, bell_pepper",
+        "ru": "ветчина, моцарелла, оливки, болгарский перец"
+      }
+    },
+    {
+      "id": 8,
+      "name": {
+        "en": "teriyaki chicken",
+        "ru": "с курицей терияки"
+      },
+      "img": ["img/teriyaki.png", "img/teriyaki.webp"],
+      "price": {
+        "25cm": 480,
+        "30cm": 580,
+        "35cm": 680
+      },
+      "toppings": {
+        "en": "teriyaki_chicken, mozzarella, onion, bell_pepper",
+        "ru": "курица терияки, моцарелла, лук, болгарский перец"
+      }
+    },
+    {
+      "id": 9,
+      "name": {
+        "en": "hawaiian",
+        "ru": "Гавайская"
+      },
+      "img": ["img/hawaiian.png", "img/hawaiian.webp"],
+      "price": {
+        "25cm": 470,
+        "30cm": 570,
+        "35cm": 670
+      },
+      "toppings": {
+        "en": "ham, pineapple, mozzarella, olives",
+        "ru": "ветчина, ананас, моцарелла, оливки"
+      }
+    },
+    {
+      "id": 10,
+      "name": {
+        "en": "neapolitan",
+        "ru": "Неаполитана"
+      },
+      "img": ["img/neapolitan.png", "img/neapolitan.webp"],
+      "price": {
+        "25cm": 490,
+        "30cm": 590,
+        "35cm": 690
+      },
+      "toppings": {
+        "en": "capers, anchovies, mozzarella, oregano",
+        "ru": "каперсы, анчоусы, моцарелла, орегано"
+      }
+    }
+  ]
+}

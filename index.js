@@ -20,25 +20,27 @@ app.get('/api/products', async (req, res) => {
 
   const selectedToppings = toppings ? toppings.split(',') : [];
 
-  const filteredProducts = selectedToppings.length > 0 ?
-    data.pizzas.filter(product =>
-      selectedToppings.every(topping =>
-        Object.values(product.toppings).some(toppingList =>
-          toppingList.includes(topping)
+  const filteredProducts =
+    selectedToppings.length > 0
+      ? data.pizzas.filter(product =>
+          selectedToppings.every(topping =>
+            Object.values(product.toppings).some(toppingList =>
+              toppingList.includes(topping),
+            ),
+          ),
         )
-      )
-    ) :
-    data.pizzas;
+      : data.pizzas;
 
   const productsWithImages = filteredProducts.map(product => {
-    const images = product.img.map(img => `${req.protocol}://${req.get('host')}/${img}`);
+    const images = product.img.map(img => `https://${req.get('host')}/${img}`);
+
+    //const images = product.img.map(img => `${req.protocol}://${req.get('host')}/${img}`);
     const { img, ...productWithoutImg } = product;
     return { ...productWithoutImg, images };
   });
 
   res.json(productsWithImages);
 });
-
 
 app.get('/api/products/:id', async (req, res) => {
   const data = await loadData();
@@ -53,7 +55,9 @@ app.get('/api/products/:id', async (req, res) => {
   }
 
   // Преобразуем относительные пути изображений в полные адреса
-  const images = product.img.map(img => `${req.protocol}://${req.get('host')}/${img}`);
+  const images = product.img.map(
+    img => `${req.protocol}://${req.get('host')}/${img}`,
+  );
   // Удаляем поле img из объекта пиццы
   delete product.img;
   // Создаем новый объект пиццы с добавленным полем images и без поля img
@@ -61,9 +65,6 @@ app.get('/api/products/:id', async (req, res) => {
 
   res.json(productWithImages);
 });
-
-
-
 
 app.get('/api/toppings', async (req, res) => {
   const data = await loadData();
@@ -74,8 +75,17 @@ app.get('/api/toppings', async (req, res) => {
 app.post('/api/orders', async (req, res) => {
   const { name, phone, address, paymentMethod, pizzas } = req.body;
 
-  if (!name || !phone || !address || !paymentMethod || !pizzas || !Array.isArray(pizzas)) {
-    return res.status(400).json({ error: 'Missing required data in the request' });
+  if (
+    !name ||
+    !phone ||
+    !address ||
+    !paymentMethod ||
+    !pizzas ||
+    !Array.isArray(pizzas)
+  ) {
+    return res
+      .status(400)
+      .json({ error: 'Missing required data in the request' });
   }
 
   let orders = [];
@@ -94,7 +104,7 @@ app.post('/api/orders', async (req, res) => {
     phone,
     address,
     paymentMethod,
-    pizzas
+    pizzas,
   };
 
   orders.push(newOrder);
